@@ -39,10 +39,7 @@ namespace Coterie.Api.ExceptionHelpers
                     break;
             }
 
-            ex = new BaseExceptionResponse
-            {
-                Message = appContext.Error.Message
-            };
+            ex = new BaseExceptionResponse(appContext.Error.Message);
 
             await response.WriteAsJsonAsync(ex);
         }

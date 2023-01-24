@@ -18,8 +18,4 @@
       <ProjectReference Include="..\Coterie.Api\Coterie.Api.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ControllerTests" />
-    </ItemGroup>
-
 </Project>

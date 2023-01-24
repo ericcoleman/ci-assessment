@@ -10,7 +10,6 @@ namespace Coterie.UnitTests
 {
     public class RateServiceShould : RateServiceTestsBase
     {
-        // Haven't worked with NUnit in a few years so instead of fighting the framework, i'll just write the test.
         [Test]
         public void CanCalculateRates()
         {

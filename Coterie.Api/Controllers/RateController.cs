@@ -28,6 +28,9 @@ namespace Coterie.Api.Controllers
         public ActionResult<GetRateResponse> CalculateRate([FromBody] GetRateRequest request)
         {
             // In the real world, this logic would be offloaded to FluentValidation or something, but for sample code this is fine.
+            if (request == null)
+                return BadRequest(new BaseExceptionResponse("Failed to parse request"));
+            
             if (request.States?.Any() != true)
                 return BadRequest(new BaseExceptionResponse("Must provide at least one state"));
             

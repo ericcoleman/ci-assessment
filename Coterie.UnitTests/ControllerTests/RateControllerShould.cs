@@ -13,6 +13,7 @@ namespace Coterie.UnitTests.ControllerTests
     {
         public static object[] BadGetCases =
         {
+            new object[] { null, "Failed to parse request" },
             new object[] { new GetRateRequest(), "Must provide at least one state" },
             new object[] { new GetRateRequest{States = new List<string>{"NotReal", "TX"}}, "Invalid State(s) provided: NotReal"},
             new object[] { new GetRateRequest{States = new List<string>{"TX"}}, "Revenue must be a positive whole number"},
